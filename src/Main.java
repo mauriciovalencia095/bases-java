@@ -4,13 +4,18 @@ public class Main {
     public static void main(String[] args) {
 
         Charmander charmander = new Charmander(0.6,8.5,"Macho","Mar llamas");
-        Charmander charmander2 = new Charmander(0.8,9.5,"Hembra","Mar llamas");
-        Charmander charmander3 = new Charmander();
-        Charmander charmander4 = new Charmander("Charmiss","Fuego",0.8,9.5,"Hembra","Mar llamas");
+       Balbasaur balbasaur = new Balbasaur();
 
 
-        charmander.setTipo("Electrico");
-        System.out.println(charmander.getTipo());
+       balbasaur.setAltura(0.7);
+       balbasaur.setPeso(6.9);
+       balbasaur.setSexo("Macho");
+       balbasaur.setHabilidad("Espesura");
+       balbasaur.setDebilidades();
+       charmander.ataqueMarLlamas(balbasaur, 20);
+        System.out.println("Los puntos de vida de " + balbasaur.getNombre() +" son " + balbasaur.getPuntosVida());
+
+
     }
 
 

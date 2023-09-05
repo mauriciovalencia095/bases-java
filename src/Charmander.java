@@ -10,16 +10,10 @@ public class Charmander {
 
     private int puntosVida =100;
 
+    private boolean isAviable = true;
+
     //Constructor
     public Charmander(double altura,double peso,String sexo, String habilidad){
-        this.altura = altura;
-        this.peso = peso;
-        this.sexo=sexo;
-        this.habilidad = habilidad;
-    }
-    public Charmander(String nombre, String tipo, double altura,double peso,String sexo, String habilidad){
-        this.tipo = tipo;
-        this.nombre = nombre;
         this.altura = altura;
         this.peso = peso;
         this.sexo=sexo;
@@ -32,6 +26,14 @@ public class Charmander {
 
     //Getter y Setter
 
+
+    public boolean isAviable() {
+        return isAviable;
+    }
+
+    public void setAviable(boolean aviable) {
+        isAviable = aviable;
+    }
 
     public int getPuntosVida() {
         return puntosVida;
@@ -95,5 +97,13 @@ public class Charmander {
 
     public void setDebilidades(String[] debilidades) {
         this.debilidades = debilidades;
+    }
+
+    //Metodos adicionales
+
+    public void ataqueMarLlamas(Balbasaur rival, int dano){
+        System.out.println(nombre + " Ataca al pokemon" + " " +rival.getNombre() + " y le causa " + dano);
+        rival.recibirDano(dano);
+
     }
 }

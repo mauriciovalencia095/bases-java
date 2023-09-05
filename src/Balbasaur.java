@@ -6,7 +6,7 @@ public class Balbasaur {
     private double peso;
     private String sexo;
     private String habilidad;
-    private String[] debilidades = {"Fuego", "Psquico", "Volador","Hielo"};
+    private String[] debilidades = new String[4];
 
     private int puntosVida =100;
 
@@ -17,15 +17,6 @@ public class Balbasaur {
         this.sexo=sexo;
         this.habilidad = habilidad;
     }
-    public Balbasaur(String nombre, String[] tipo, double altura, double peso, String sexo, String habilidad){
-        this.tipo = tipo;
-        this.nombre = nombre;
-        this.altura = altura;
-        this.peso = peso;
-        this.sexo=sexo;
-        this.habilidad = habilidad;
-    }
-
     public Balbasaur(){
 
     }
@@ -93,7 +84,16 @@ public class Balbasaur {
         return debilidades;
     }
 
-    public void setDebilidades(String[] debilidades) {
-        this.debilidades = debilidades;
+    public void setDebilidades() {
+        debilidades[0]="Fuego";
+        debilidades[1]="Psquico";
+        debilidades[2]="Volador";
+        debilidades[3]="Hielo";
+    }
+
+    //Metodos adicionales
+
+    public void recibirDano(int dano){
+        puntosVida = puntosVida - dano;
     }
 }
